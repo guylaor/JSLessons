@@ -19,6 +19,24 @@ www.bbc.co.uk -> bbc.co.uk
 
 */
 
+//creates new array of list elements without www.
+
+for ( var i = 0, list2 = []; i < list.length; i++ ) {
+	
+	list2.push( list[i].slice( 4, list[i].length ) );
+	
+	}
+	
+
+//changes list elements to omit www.
+
+for (i = 0; i < list.length; i++) {
+
+	list[0] = list[i].slice( 4, list[0].length );
+	
+	}
+
+
 </script>
 
 </body>
