@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 6 - Tree layout</title>
+</head>
+<body>
+
+<script>
+var data = [];
+//         Name     ID   ParentID
+data[0] = ["John", "1", ""];
+data[1] = ["Greg", "2", "1"];
+data[2] = ["Mary", "3", ""];
+data[3] = ["Mitch", "4", "1"];
+data[4] = ["Bob", "5", "3"];
+data[5] = ["Steve", "6", "1"];
+data[6] = ["Eve", "7", "4"];
+data[7] = ["Jacob", "18", "4"];
+data[8] = ["Brian", "19", "7"];
+data[9] = ["Kofi", "32", "7"];
+data[10] = ["Mary", "33", "1"];
+data[11] = ["Benson", "36", "7"];
+data[12] = ["Monty", "37", "5"];
+
+
+/*
+
+This array is the output of a database table, every row has the following columns: Name, ID, ParentID
+so that if the Parent ID column has a value, that person is the son of the parent. 
+For example:
+in data[1] the parentID of Greg is "1", which is the ID of John in row 0. Note that the ID's do not always match the row numbers. 
+
+The task is to create a tree layout representation of all the people in this table, and indent them according to the parent.
+So that it will be visibly clear who is the son of who, for example:
+
+John
+	-> Greg
+	
+	  
+
+
+*/
+
+</script>
+
+<div id="myDiv"></div>
+
+</body>
+</html> 
