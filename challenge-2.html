@@ -21,21 +21,57 @@ www.bbc.co.uk -> bbc.co.uk
 
 //creates new array of list elements without www.
 
-for ( var i = 0, list2 = []; i < list.length; i++ ) {
+var myRE = /^www./;
+
+var list = Array("www.cnn.com", "www.bbc.co.uk", "cbs.com", "cc.com");
+
+var list2 = [];
+
+var truncator = function() {
+	for ( var i = 0; i < list.length; i++ ) {
+
+		if ( myRE.test( list[i] ) == true ) {
+			
+			list2.push( list[i].slice( 4, list[i].length ) );
+			
+		}
+		
+	else 
 	
-	list2.push( list[i].slice( 4, list[i].length ) );
+		{ list2.push( list[i] );
 	
 	}
+	
+}
+  
+};
+
+truncator();
+
+console.log( list2 );
 	
 
 //changes list elements to omit www.
 
-for (i = 0; i < list.length; i++) {
+var truncator2 = function() {
+	
+	for ( var i = 0; i < list.length; i++ ) {
 
-	list[0] = list[i].slice( 4, list[0].length );
+		if ( myRE.test( list[i] ) == true ) {
+			
+			list[i] = list[i].slice( 4, list[i].length );
+			
+		  }
 	
 	}
+	
+}
+  
+};
 
+truncator2();
+
+console.log( list );
 
 </script>
 
