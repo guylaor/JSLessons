@@ -5,7 +5,9 @@
 </head>
 <body>
 
-<script>
+
+
+<div id="myDiv"><script>
 
 data = {
 	"name" : "Biggles",
@@ -26,9 +28,11 @@ and insert that into myDiv.
 
 */
 
-</script>
+var newString = template.replace("{{NAME}}", data.name ).replace("{{AGE}}", data.age).replace("{{JOB}}", data.job);
 
-<div id="myDiv"></div>
+document.getElementById("myDiv").innerHTML = newString;
+
+</script></div>
 
 </body>
 </html> 
