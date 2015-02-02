@@ -7,7 +7,11 @@
 
 
 
-<div id="myDiv"><script>
+<div id="myDiv1"></div>
+<div id="myDiv2"></div>
+<div id="myDiv3"></div>
+
+<script>
 
 data = {
 	"name" : "Biggles",
@@ -18,21 +22,38 @@ data = {
 var template = 'Hello, my name is {{NAME}}, I am {{AGE}} years old, and I am a {{JOB}} for a living.';
 
 
+data2 = {
+	"specie": "Baboon",
+	"type" : "Monkey",
+	"snout" : "Doglike"
+}
+
+data3 = {
+	"specie": "Eel",
+	"type" : "Fish",
+	"snout" : "snakelike"
+	
+}
+
+var template2 = 'Hello, I am a {{specie}}, which is a type of {{type}}, that has a {{snout}} snout.';
+
+
+
 /*
 
 Create a script that will use the data object and the template to convert it to the string:
 
 Hello, my name is Biggles, I am 24 years old, and I am a Pilot for a living.
 
-and insert that into myDiv.
+and insert that into myDiv1.
+
+Use the same code to do the same with data2 and data3 using tempalte2. 
 
 */
 
-var newString = template.replace("{{NAME}}", data.name ).replace("{{AGE}}", data.age).replace("{{JOB}}", data.job);
 
-document.getElementById("myDiv").innerHTML = newString;
 
-</script></div>
+</script>
 
 </body>
 </html> 
