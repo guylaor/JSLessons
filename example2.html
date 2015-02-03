@@ -1,0 +1,63 @@
+<script>
+
+
+var module = (function () {
+
+	var name = Math.random();
+	
+	var funny = function () {
+		return name;
+	};
+	
+	return {
+		
+		say: function() {
+			console.log("say " + funny() );
+		}
+	
+	
+	}
+
+})();
+
+var module2 = function () {
+
+	var name = Math.random();
+	
+	var funny = function () {
+		return name;
+	};
+	
+	return {
+		
+		say: function() {
+			console.log("say " + funny() );
+		}
+	
+	
+	}
+
+};
+
+var m1 = module;
+var m2 = module;
+
+console.log(m1.say());
+console.log(m2.say());
+/// THIS IS THE MAGIC LINE :
+console.log(module2.say());
+
+/*
+
+questions:
+
+1. explain clearly what is the difference between module and module2
+2. by changing ONLY something in line 48 - make the last console.log statment work.
+3. explain why the values from lines 45 and 46 are the same, and why the value from line 48 is different from these two.
+4. is it possible to do: console.log( m1.funny() ); ? and if not - why?
+
+
+*/
+
+</script>
+
