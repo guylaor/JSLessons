@@ -39,19 +39,19 @@ var template2 = 'Hello, I am a {{specie}}, which is a type of {{type}}, that has
 
 var replacer = function() {
 
-	var sentence = template.split(" ");
+	var sentence = template.replace(/[\.\,\;&]+/g, '').split(' ');
 	
 	for (i = 0 ; i< sentence.length; i++){
 
 		if ( sentence[i].match( /\{\{.*\}\}/ ) ) {
-		
-		/*	var substring = sentence[i].match(/^\{\{.*\}\}/);
 			
-			var substringArray = substring.split("");
-
+			var dataProperty = sentence[i].replace(/[\}\{]+/g, '');
 			
- 
-			console.log( substringArray ); */
+			var objectValue = "data." + dataProperty;
+			
+			var parsedProperty = JSON.parse( data.);
+			
+			console.log( parsedProperty );
 				}
 			}
 			
