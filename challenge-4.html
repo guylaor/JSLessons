@@ -37,7 +37,26 @@ data3 = {
 
 var template2 = 'Hello, I am a {{specie}}, which is a type of {{type}}, that has a {{snout}} snout.';
 
+var replacer = function() {
 
+	var sentence = template.split(" ");
+	
+	for (i = 0 ; i< sentence.length; i++){
+
+		if ( sentence[i].match( /\{\{.*\}\}/ ) ) {
+		
+		/*	var substring = sentence[i].match(/^\{\{.*\}\}/);
+			
+			var substringArray = substring.split("");
+
+			
+ 
+			console.log( substringArray ); */
+				}
+			}
+			
+		
+}();
 
 /*
 
