@@ -35,28 +35,29 @@ data3 = {
 	
 }
 
+var template = "Hello, my name is {{NAME}}, and I am {{AGE}} years old, and I am a {{JOB}} for a living.";
+
 var template2 = 'Hello, I am a {{specie}}, which is a type of {{type}}, that has a {{snout}} snout.';
+var element = document.getElementById("myDiv1");
 
-var replacer = function() {
+var replacer = function(template, obj ) {
 
-	var sentence = template.replace(/[\.\,\;&]+/g, '').split(' ');
-	
-	for (i = 0 ; i< sentence.length; i++){
+var patt = /{{.*?}}/;
 
-		if ( sentence[i].match( /\{\{.*\}\}/ ) ) {
-			
-			var dataProperty = sentence[i].replace(/[\}\{]+/g, '');
-			
-			var objectValue = "data." + dataProperty;
-			
-			var parsedProperty = JSON.parse( data.);
-			
-			console.log( parsedProperty );
-				}
-			}
-			
-		
-}();
+while ( patt.test(template) == true ){
+
+var bracketed = patt.exec( template ); 
+
+var unBracketed = bracketed.toString().replace("{{", "").replace("}}", "").toLowerCase();
+
+var dataValue = obj[ unBracketed ];
+
+template = template.replace( bracketed, dataValue );
+
+}
+element.innerHTML = replacer( template, dataValue );
+};
+
 
 /*
 
