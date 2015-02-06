@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Challenge 6 - Tree layout</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="challenge-6.css">
+	<title>Challenge 6 - Tree layout</title>
+	<script src="challenge-6.js"></script>
 </head>
-<body>
+
+<body id="body">
 
 <script>
-var data = [];
-//         Name     ID   ParentID
-data[0] = ["John", "1", ""];
-data[1] = ["Greg", "2", "1"];
-data[2] = ["Mary", "3", ""];
-data[3] = ["Mitch", "4", "1"];
-data[4] = ["Bob", "5", "3"];
-data[5] = ["Steve", "6", "1"];
-data[6] = ["Eve", "7", "4"];
-data[7] = ["Jacob", "18", "4"];
-data[8] = ["Brian", "19", "7"];
-data[9] = ["Kofi", "32", "7"];
-data[10] = ["Mary", "33", "1"];
-data[11] = ["Benson", "36", "7"];
-data[12] = ["Monty", "37", "5"];
-
-
+genCount();
 /*
 
 This array is the output of a database table, every row has the following columns: Name, ID, ParentID
@@ -35,15 +24,9 @@ So that it will be visibly clear who is the son of who, for example:
 
 John
 	-> Greg
-	
-	  
-
-
 */
 
 </script>
-
-<div id="myDiv"></div>
 
 </body>
 </html> 
