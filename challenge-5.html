@@ -30,39 +30,6 @@ Condition: None of the math should be in public methods.
 
 */
 
-function MagicalNumberObject(magic) {
-var value = magic;
-var alpha = function() {
-	return ( value * value);
-	}
-var beta = function() {
-	return (Math.sqrt(value));
-}
-var foo = function() {
-		if (value %2 === 0 ) {
-	
-		return true;
-		}
-	return false;
-}
-this.squared = function () {
-return ( alpha );
-}
-this.rooted = function() { 
-	return(beta);
-}
-
-this.isEvened = function() { 
-	return(foo);
-}
-}
-
-var myNum = new MagicalNumberObject(2);
-var square = myNum.squared();
-console.log( square() );
-// console.log( myNum.squared() ) returns the function, not the solution
-
-
 </script>
 
 </body>
