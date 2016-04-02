@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-		<meta charset="UTF-8">
-		<script src="challenge-4.js">
-
-		</script>
+<title>Challenge 4 - templating</title>
 </head>
-
 <body>
 
-<div id="myDiv1"></div>
-<div id="myDiv2"></div>
-<div id="myDiv3"></div>
 <script>
-replacer( template, data );
-replacer( template2, data2);
-replacer( template2, data3);
+
+data = {
+	"name" : "Biggles",
+	"age"  	: "24",
+	"job"	: "Pilot"
+};
+
+var template = 'Hello, my name is {{NAME}}, I am {{AGE}} years old, and I am a {{JOB}} for a living.';
+
+
+/*
+
+Create a script that will use the data object and the template to convert it to the string:
+
+Hello, my name is Biggles, I am 24 years old, and I am a Pilot for a living.
+
+and insert that into myDiv.
+
+*/
+
 </script>
+
+<div id="myDiv"></div>
+
 </body>
-</html>
+</html> 
