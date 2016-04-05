@@ -10,9 +10,19 @@ var subjects = ["Ancient Greek", "Math", "Baking", "Needle work"];
 
 PART I - Multi dimensional Arrays
 
-create a new array called grades.
-use the function random() to assign to each student a grade for each subject. 
-display the information as:
+1. create a new array called grades. This will be a multi-dimensional array of the structure of:
+
+  grades["STUDENT"]["SUBJECT"] = grade;
+  
+2. use the math function random() to assign to each student a grade for each subject. 
+
+3. output the grades array, you should have something like this in the console
+[Robert: Array[0]]
+      Robert: Array[0]
+        Baking:70
+        Math:80
+
+4. display the information cleanly as:
 
 Student name
   Ancient Greek: 80
@@ -20,19 +30,23 @@ Student name
   
 and so on.... 
 
+
+
 PART II - add some math
 
-For each student calcualte the mean (avarage) of all his/hers grades.
-calcualte the mean of grades per subject. 
+5. add another value to the grades array per student, this will be the avarage. 
 
-Add that information to the display, so that:
+grades["STUDENT"]["AVG"] = 0;
+
+6. For each student calcualte the mean (avarage) of all his/hers grades, and put the value in the ["AVG"] 
+
+7. Add that information to the display, so that:
 
 STUDENT NAME
   Ancient Greek: 80
   ........
   Avarage Grade: 65
-  
-and then the avarage grades for each subject from all the students
+
 
 */
 </script>
