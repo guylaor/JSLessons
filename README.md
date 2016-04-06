@@ -11,7 +11,6 @@ Loops:
 
 String Manipulation:
 
-- challenge-2.html
 - challenge-4.html
 - strings/longest_run.html
 - strings/cleaning_text.html
@@ -28,3 +27,7 @@ Arrays:
 Objects:
 
 - challenge-5.html
+
+RegEx
+
+- challenge-2.html
