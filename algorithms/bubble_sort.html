@@ -26,6 +26,18 @@ end result should be:
 
 */
 
+var len = arr.length;
+var i = len;
+for (; i > 1; i-- ) {
+  for (var t=0; t<i; t++) {
+    if ( arr[t] > arr[t+1] ) {
+      var temp = arr[t];
+      arr[t] = arr[t+1];
+      arr[t+1] = temp;
+    }
+  }
+}
+
 console.log(arr);
 
 </script>
