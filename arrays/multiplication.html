@@ -20,6 +20,25 @@ Think of a way to display the multipliction table for 1 to 10 as it is show belo
 
 */
 
+
+
+var multi = []
+for (var i = 1; i <= 10; i++) {
+  multi[i] = [];
+  for (var j =1; j <= 10; j++) {
+    multi[i][j] = i * j;
+  }
+}
+
+for (var i = 1; i <= 10; i++) {
+  for (var j =1; j <= 10; j++) {
+    document.write('<div style="width:30px; float:left;">')
+    document.write(multi[i][j] + "\t</div>");
+  }
+  document.write("<br>")
+}
+
+
 </script>
 </body>
 </html>
