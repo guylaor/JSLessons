@@ -22,11 +22,21 @@ array.
 5. create a function that will take 2 arguments, 2 arrays, and return only the values that appear in both arrays. 
 use it to find which values appar in str1 and in the arrays above.  
 
-6. create a function that will return an associative array, the key will be the words from arr1,arr2, and arr3, as well as from 
-str1 - and the value will be the count of how many times this word appears. so that:
+6. create a function that will return an Object. In this object have the unique words from arr1,arr2, and arr3, as well as from 
+str1 as keys. And the values for each key will be the count of how many times this word appears. so that the object will look 
+something like this (for all the words):
 
-result["egg"] = 2;
+words = {
+   "egg" : 2,
+   "mango": 3
+}
 
+7. create a function that will use the words object, and can simply return the count value for every words. 
+so that:
+
+document.write( showCount("egg") );
+// will output:
+2
 
 
 */
